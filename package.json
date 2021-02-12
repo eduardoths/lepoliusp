@@ -1,0 +1,26 @@
+{
+  "name": "lepoliusp",
+  "version": "1.0.0",
+  "description": "Site da Liga de Empreendedorismo da Poli",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardothsantos/lepoliusp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardothsantos/lepoliusp/issues"
+  },
+  "homepage": "https://github.com/eduardothsantos/lepoliusp#readme",
+  "dependencies": {
+    "next": "^10.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.32.7"
+  }
+}
