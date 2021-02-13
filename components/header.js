@@ -30,10 +30,13 @@ function MenuSimbolo(props) {
     const rotate = !proxIsFechado ? "45deg" : "0deg" + ")";
     const visibility = proxIsFechado ? "visible" : "hidden";
     const delay = proxIsFechado ? "0.15s" : "0s";
+    const position = proxIsFechado ? "inherit" : "absolute";
+    const top = proxIsFechado ? "0" : "3px";
+    const bottom = proxIsFechado ? "0" : "3px";
     const novosEstilos = estilos.slice();
-    novosEstilos[0] = {transform: "rotate(-" + rotate};
+    novosEstilos[0] = {transform: "rotate(-" + rotate, position: position, top: top, left: 0};
     novosEstilos[1] = {transitionDelay: delay, visibility: visibility};
-    novosEstilos[2] = {transform: "rotate(" + rotate}; 
+    novosEstilos[2] = {transform: "rotate(" + rotate, position: position, bottom: bottom, left: 0}; 
 
     setIsFechado(proxIsFechado);
     setEstilos(novosEstilos);
