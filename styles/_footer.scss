@@ -1,5 +1,44 @@
 .footer {
   color: #ffffff;
   width: 100%;
-  background-color: #cccccc; 
+  background-color: $black;
+  p {
+    text-indent: 0;
+    text-align: justify;
+    justify-content: left;
+  }
+  
+  h3, h5 {
+    text-align: center;
+  }
+
+  li {
+    list-style-type: none;  
+  }
+
+  &-about {
+    padding: 60px 10px 60px 10px;
+  }
+
+  &-social-media {
+    padding: 40px 0 40px 0;
+    background-color: #101010;
+    width: 100%;
+    > div > div {
+      padding: 5px 10px 0 10px;
+    }
+  }
+
+  &__menu {
+    text-align: center;
+    padding: 0;
+    ul {
+      display: block;
+      
+    }
+  }
+  &-scroll-up {
+    background-color: #131313;
+    padding: 40px 10px 40px 10px;
+  }
 }
