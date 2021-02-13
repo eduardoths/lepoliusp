@@ -1,0 +1,52 @@
+.header {
+  background-color: $cor_fundo;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  nav {
+    padding: 6px;
+  }
+  
+  &__logo {
+    width: auto;
+    height: 64px;
+    cursor: pointer;
+  }
+
+  &__menu{
+    overflow: hidden;
+    &__mobile {
+      > a {
+        display: block;
+        padding: 10px 20px;
+        border-top: solid 1px #cccccc;
+        color: $destaque_primario;
+      }
+    }
+    > span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background-color: $ham-menu;
+      border-radius: 10px 10px 10px 10px;
+      transition: transform 0.5s, visibility 0s;
+ 
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__links {
+    display: none;
+    a {
+      color: $destaque_primario;
+      transition: color 1s;
+    }
+
+    a:hover {
+      color: $destaque_secundario;
+      transition-delay: 0.1s;
+    }
+  }
+}

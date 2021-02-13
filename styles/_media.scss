@@ -1,0 +1,34 @@
+@media only screen and (min-width: 768px) {
+  .container {max-width: 1140px;}
+  nav {max-width: 1140px; margin: auto;}
+  .header {
+    &__menu {
+      display: none;
+    }
+    &__links {
+      display: block;
+      a {
+        padding: 0 10px;
+      }
+    }
+  }
+  .inicio-conteudo > div {
+    font-size: 4rem;
+  }
+  .col {
+    $width: 1/12*100%;
+    &-1  {width: 1*$width;}
+    &-2  {width: 2*$width;}
+    &-3  {width: 3*$width;}
+    &-4  {width: 4*$width;}
+    &-5  {width: 5*$width;}
+    &-6  {width: 6*$width;}
+    &-7  {width: 7*$width;}
+    &-8  {width: 8*$width;}
+    &-9  {width: 9*$width;}
+    &-10 {width: 10*$width;}
+    &-11 {width: 11*$width;}
+    &-12 {width: 12*$width;}
+  }
+  .row-reverse-mb {flex-wrap: wrap;}
+}
