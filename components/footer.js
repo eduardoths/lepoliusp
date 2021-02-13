@@ -32,9 +32,10 @@ export default function Footer() {
             <h3>Contato</h3>
             <p>
               <FontAwesomeIcon icon={faMapMarkerAlt} width="10"/>&nbsp; 
-              Escola Politécnica da USP
+              Escola Politécnica da USP - Av. Prof. Luciano Gualberto, 380 - Butantã, São Paulo - SP</p>
+            <p>
+              <strong>Email:</strong> lepoliusp@gmail.com
             </p>
-            <p>Av. Prof. Luciano Gualberto, 380 <br/> Butantã, São Paulo - SP</p>
           </div>
         </div>
       </div>
