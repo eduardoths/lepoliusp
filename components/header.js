@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function MenuSpan(props) {
   return <span style={props.style}></span>
@@ -62,6 +62,14 @@ export default function Header() {
   const [menuFechado, setMenuFechado] = useState(true);
   const [displayMenuInferior, setDisplayMenuInferior] = useState({display: "none"});
   const [menuInferior, setMenuInferior] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  function handleScroll() {
+    const currentScrollPos = window.pageYOffset;
+    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 0) || currentScrollPos < 76);
+    setPrevScrollPos(currentScrollPos);
+  }
 
   function handleClick() {
     let proxDisplay = (displayMenuInferior.display === "block") ? "none" : "block"; 
@@ -70,8 +78,12 @@ export default function Header() {
     setMenuInferior(!menuInferior);
   }
 
+  useEffect(()=>{
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);  
   return (
-    <header className="header">
+    <header className="header" id="header" style={{top: visible ? "0px" : "-76px"}}>
       <nav className="flex flex-jc-sb flex-ai-c">
         <Link href="/">
           <img alt="Liga de Empreendedorismo da USP" src="img/logo.png" className="header__logo"/>
