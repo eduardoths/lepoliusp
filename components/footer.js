@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
     </div>
     <div className="footer-scroll-up">
-      <h5>Copyright © 2021 Liga de Empreendedorismo da Poli - Todos os direitos reservados</h5>
+      <h4>Copyright © 2021 Liga de Empreendedorismo da Poli - Todos os direitos reservados</h4>
     </div>
   </footer>
   );
