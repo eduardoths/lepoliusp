@@ -31,4 +31,38 @@
     &-12 {width: 12*$width;}
   }
   .row-reverse-mb {flex-wrap: wrap;}
+
+  .inicio {
+    &-card {
+      width: 700px;
+      &-titulo {
+        font-size: 2.5rem;
+      }
+      &-texto {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .linhas-divisoria {
+    span:nth-child(1) {
+      width: 50%;
+    } 
+    span:nth-child(2) {
+      width: 45%;
+    }
+    span:nth-child(3) {
+      width: 40%;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .inicio {
+    justify-content: left;
+    align-items: flex-start;
+    &-card {
+      margin: 200px 0 0 60px;
+    }
+  }
 }

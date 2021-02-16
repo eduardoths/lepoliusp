@@ -1,5 +1,6 @@
 .inicio {
   display: flex;
+  position: relative;
   width: 100%;
   height: 100vh;
   background-color: $inicio_fundo;
@@ -7,18 +8,26 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  &-conteudo {
-    display: block;
-    text-justify: center;
-    margin: auto;
-    font-family: 'Montserrat';
-  }
-  &-conteudo > div {
-    float: left;
-    font-size: 2.5rem;
-  }
-  &-conteudo > div .barra {
-    margin-right: 1px;
-  }
+  
+  &-card {
+    width: 90%;
+    background: rgba(20, 37, 52, 0.65);
+    padding: 20px;
+    border-radius: 13px;
 
+    &-titulo {
+      clear: both;
+      font-family: 'Century Gothic';
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    &-texto {
+      clear: both;
+      text-align: justify;
+      font-family: 'Century Gothic';
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: normal;
+    }
+  } 
 }
