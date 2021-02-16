@@ -1,5 +1,13 @@
 function Home() {
-  return <div>Home</div>
+  return (
+  <>
+  <div className="inicio">
+    <div>
+      Home
+    </div>
+  </div>
+  </>
+  );
 }
 
 export default Home;

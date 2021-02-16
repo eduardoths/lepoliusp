@@ -11,8 +11,8 @@ export default function App({Component, pageProps}) {
         <link rel="shortcut icon" href="/img/icon_liga.png" />
       </Head>
       <Header />
-      <div className="inicio-container">
-        <Component {...pageProps}/>
+      <div className="corpo">
+      <Component {...pageProps}/>
       </div>
       <Footer />
     </>
