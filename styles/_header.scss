@@ -33,7 +33,7 @@
       height: 3px;
       background-color: $ham-menu;
       border-radius: 10px 10px 10px 10px;
-      transition: transform 0.5s, top 0.5s, bottom 0.5s, visibility 0s;
+      transition: transform 0.5s, top 0.1s, bottom 0.1s, visibility 0s;
  
       &:not(:last-child) {
         margin-bottom: 5px;
