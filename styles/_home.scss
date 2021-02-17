@@ -1,0 +1,120 @@
+.inicio {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: $inicio_fundo;
+  color: $texto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  
+  &-card {
+    width: 90%;
+    background: rgba(20, 37, 52, 0.65);
+    padding: 20px;
+    border-radius: 13px;
+
+    &-titulo {
+      clear: both;
+      font-family: 'Century Gothic';
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    &-texto {
+      clear: both;
+      text-align: justify;
+      font-family: 'Century Gothic';
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: normal;
+    }
+  } 
+}
+
+.linhas-divisoria {
+  width: 100%;
+  height: 3rem;
+  > span {
+    display: block;
+    height: 2px;
+    background-color: #556069;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0 0 10px 0;
+  }
+  span:nth-child(1) {
+    width: 70%;
+  } 
+  span:nth-child(2) {
+    width: 65%;
+  }
+  span:nth-child(3) {
+    width: 60%;
+    margin: 0;
+  }
+}
+
+.selection-process {
+  font-family: "Century Gothic";
+  background-color: #020d14;
+  h1 {
+    height: fit-content;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: left;
+    padding-left: 20px;
+    color: #ffffff;
+  }
+
+  &-form {
+    display: flex;
+    padding: 10px 10px 0 10px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    input {
+      width: 100%;
+      background: $bg_input;
+      border: hidden;
+      border-radius: 26px;
+      height: 49px;
+      text-align: center;
+      font-size: 1.5rem;
+      box-sizing: border-box;
+      color: $color_input;
+    }
+    input:focus {
+      outline: none;
+      color: #ffffff;
+    }
+
+    button {
+      border-radius: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      width: 100%;
+      background: $bg_submit;
+      height: 3rem;
+      border: none;
+      text-align: center;
+      color: $color_submit;
+      line-height: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  &-bg {
+    padding: 0;
+    margin: 0;
+    background-image: url('../public/img/background-selection_process.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    height: 31vw;
+  }
+}

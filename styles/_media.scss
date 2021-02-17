@@ -44,6 +44,7 @@
     }
   }
   .linhas-divisoria {
+    margin-bottom: 6rem;
     span:nth-child(1) {
       width: 50%;
     } 
@@ -53,6 +54,17 @@
     span:nth-child(3) {
       width: 40%;
       margin: 0;
+    }
+  }
+  .selection-process {
+    h1 {
+      font-size: 4rem;
+      margin: 0 0 6rem 3rem;
+      max-width: 768px;
+      line-height: 4rem;
+    }
+    &-form {
+      padding-bottom: 20px; 
     }
   }
 }

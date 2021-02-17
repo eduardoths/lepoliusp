@@ -54,31 +54,3 @@ img {
   padding: 76px 0 0 0;
 }
 
-.linhas-divisoria {
-  width: 100%;
-  background: $inicio_fundo;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  > span {
-    display: block;
-    position: inherit;
-    height: 2px;
-    background-color: #556069;
-    border-radius: 10px 10px 10px 10px;
-  }
-  span:nth-child(1) {
-    width: 70%;
-    bottom: 20px;
-  } 
-  span:nth-child(2) {
-    width: 65%;
-    bottom: 10px;
-  }
-  span:nth-child(3) {
-    width: 60%;
-    margin: 0;
-    bottom: 0px;
-  }
-}

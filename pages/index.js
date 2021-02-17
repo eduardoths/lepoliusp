@@ -1,3 +1,4 @@
+import SelectionProcess from '../components/SelectionProcess'
 function Home() {
   return (
   <>
@@ -13,11 +14,7 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className="linhas-divisoria">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <SelectionProcess />
   </>
   );
 }
