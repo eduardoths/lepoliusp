@@ -75,40 +75,17 @@
     justify-content: center;
     margin: auto;
     input {
-      width: 100%;
-      background: $bg_input;
-      border: hidden;
-      border-radius: 26px;
       height: 49px;
       text-align: center;
       font-size: 1.5rem;
-      box-sizing: border-box;
-      color: $color_input;
     }
-    input:focus {
-      outline: none;
-      color: #ffffff;
-    }
-
     button {
-      border-radius: 26px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto;
       width: 100%;
-      background: $bg_submit;
       height: 3rem;
-      border: none;
       text-align: center;
-      color: $color_submit;
       line-height: 2rem;
       font-size: 1.5rem;
-      font-weight: bold;
-    }
-    button:hover {
-      cursor: pointer;
-      background-color: $bg_submit_hover;
     }
   }
 

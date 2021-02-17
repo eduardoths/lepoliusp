@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMailBulk, faMapMarkerAlt } from  '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faInstagram, faInstagramSquare, faLinkedinIn, faMailchimp } from '@fortawesome/free-brands-svg-icons';
+import ContatoForm from '../components/Contato/ContatoForm';
 
 function Contato() {
   return (
@@ -38,35 +39,7 @@ function Contato() {
             </span>
           </div>
           <div className="col-9">
-            <form method="POST">
-            <div className="row">
-              <div className="col-6 contato-input">
-                <span>Nome</span>
-                <input type="text"/>
-              </div>
-              <div className="col-6 contato-input">
-                <span>Sobrenome</span>
-                <input type="text"/>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-12 contato-input">
-                <span>Email</span>
-                <input type="email"/>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-12 contato-input">
-                <span>Mensagem</span>
-                <textarea type="text" id="mensagem"></textarea>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-12 contato-input">
-                <button type="submit">Enviar</button>
-              </div>
-            </div>
-            </form>
+            <ContatoForm />
           </div>
         </div>
     </div>

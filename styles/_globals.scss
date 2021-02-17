@@ -54,3 +54,39 @@ img {
   padding: 76px 0 0 0;
 }
 
+input, textarea {
+  width: 100%;
+  background: $bg_input;
+  border: hidden;
+  border-radius: 26px;
+  padding-left: 26px;
+  line-height: 2rem;
+  color: $color_input;
+  resize: none;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  color: #ffffff;
+}
+
+button {
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  background: $bg_submit;
+  border: none;
+  text-align: center;
+  color: $color_submit;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: $bg_submit_hover;
+}
