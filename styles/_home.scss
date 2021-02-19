@@ -116,7 +116,6 @@
   background-size: auto;
   background-position: left;
   overflow-x: auto;
-
   &-head {
     text-align: center;
     > p, h1 {
@@ -196,5 +195,54 @@
     top: 50%;
     right: 10px;
     transform: translate(0, -50%);
+  }
+}
+
+.sponsors {
+  background: linear-gradient(180deg, rgba(164, 191, 213, 0) 8.85%, #A4BFD5 81.77%);
+  height: 792px;
+  &-header {
+    width: 50%;
+    margin: auto;
+    display: block;
+    align-items: center;
+    color: $white;
+    margin-bottom: 100px;
+    > h1 {
+      font-weight: bold;
+      font-size: 3.4375rem;
+      line-height: 3.0625rem;
+      text-align: center;
+    }
+    >p {
+      text-align: center;
+      text-justify: center;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+    }
+  }
+  &-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 570px;
+  }
+  &-logo {
+    width: 100%;
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-img {
+      margin: auto;
+    }
+  }
+  &-logo:hover {
+    opacity: 0.6;
+  }
+  &-logo:focus {
+    outline: none;
   }
 }
