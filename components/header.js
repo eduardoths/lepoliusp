@@ -10,7 +10,7 @@ function MenuLinks(props) {
   if (classConcat === undefined)
     classConcat = "";
   return (
-    <div style={props.style} className={"header__links " + classConcat}>
+    <div onClick={props.onClick} style={props.style} className={"header__links " + classConcat}>
       <Link href="/">Home</Link>
       <Link href="/Sobre">Quem Somos</Link>
       <Link href="/Projetos">Projetos</Link>
@@ -22,33 +22,11 @@ function MenuLinks(props) {
 }
 
 function MenuSimbolo(props) {
-  const [isFechado, setIsFechado] = useState(true);
-  const [estilos, setEstilos] = useState(Array(3).fill(null));
-  
-  function handleClick () {
-    const proxIsFechado = !isFechado;
-    const rotate = !proxIsFechado ? "45deg" : "0deg" + ")";
-    const visibility = proxIsFechado ? "visible" : "hidden";
-    const delay = proxIsFechado ? "0.15s" : "0s";
-    const position = proxIsFechado ? "inherit" : "absolute";
-    const top = proxIsFechado ? "0" : "2.5px";
-    const bottom = proxIsFechado ? "0" : "2.5px";
-    const novosEstilos = estilos.slice();
-    novosEstilos[0] = {transform: "rotate(-" + rotate, position: position, top: top, left: 0};
-    novosEstilos[1] = {transitionDelay: delay, visibility: visibility};
-    novosEstilos[2] = {transform: "rotate(" + rotate, position: position, bottom: bottom, left: 0}; 
-
-    setIsFechado(proxIsFechado);
-    setEstilos(novosEstilos);
-  }
   return (
-    <a className="header__menu" onClick={() => {
-      handleClick();
-      props.cliqueMenu();
-    }}>
-      <MenuSpan style={estilos[0]}/>
-      <MenuSpan style={estilos[1]}/>
-      <MenuSpan style={estilos[2]}/>
+    <a className="header__menu" onClick={props.cliqueMenu}>
+      <MenuSpan style={props.estilos[0]}/>
+      <MenuSpan style={props.estilos[1]}/>
+      <MenuSpan style={props.estilos[2]}/>
     </a>
   );
 }
@@ -64,6 +42,7 @@ export default function Header() {
   const [menuInferior, setMenuInferior] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [estilos, setEstilos] = useState(Array(3).fill(null));
 
   function handleScroll() {
     const currentScrollPos = window.pageYOffset;
@@ -77,6 +56,23 @@ export default function Header() {
     setDisplayMenuInferior({display : proxDisplay});
     setMenuInferior(!menuInferior);
   }
+  
+  function handleClickMenu () {
+    const proxIsFechado = !menuFechado;
+    const rotate = !proxIsFechado ? "45deg" : "0deg" + ")";
+    const visibility = proxIsFechado ? "visible" : "hidden";
+    const delay = proxIsFechado ? "0.15s" : "0s";
+    const position = proxIsFechado ? "inherit" : "absolute";
+    const top = proxIsFechado ? "0" : "2.5px";
+    const bottom = proxIsFechado ? "0" : "2.5px";
+    const novosEstilos = estilos.slice();
+    novosEstilos[0] = {transform: "rotate(-" + rotate, position: position, top: top, left: 0};
+    novosEstilos[1] = {transitionDelay: delay, visibility: visibility};
+    novosEstilos[2] = {transform: "rotate(" + rotate, position: position, bottom: bottom, left: 0}; 
+
+    setMenuFechado(proxIsFechado);
+    setEstilos(novosEstilos);
+  }
 
   useEffect(()=>{
     window.addEventListener('scroll', handleScroll);
@@ -88,10 +84,10 @@ export default function Header() {
         <Link href="/">
           <img alt="Liga de Empreendedorismo da USP" src="img/logo.png" className="header__logo"/>
         </Link>
-        <MenuSimbolo cliqueMenu={handleClick}/>
+        <MenuSimbolo estilos={estilos} cliqueMenu={() => {handleClick(), handleClickMenu()}}/>
         <MenuLinks />
       </nav>
-      <MenuLinks style={displayMenuInferior} classConcat="header__menu__mobile"/>
+      <MenuLinks style={displayMenuInferior} classConcat="header__menu__mobile" onClick={() => {handleClick(), handleClickMenu()}}/>
     </header>
   );
 }
