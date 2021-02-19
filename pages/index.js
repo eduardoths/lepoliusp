@@ -9,7 +9,7 @@ function Home() {
         </div>
         <div className="inicio-card-texto">
           Temos como missão <strong>inspirar</strong>, <strong>conectar</strong> e <strong>capacitar </strong> 
-          futuros empreendedores e empreendedoras politécnicos.<br/>
+          futuros empreendedores e empreendedoras politécnicos.<br/><br/>
           Venha fazer parte!
         </div>
       </div>
