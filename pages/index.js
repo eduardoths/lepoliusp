@@ -4,6 +4,7 @@ function Home() {
   <>
   <section id="home-start">
     <div className="inicio">
+      <img src="/img/logo-main_page.png" className="inicio-logo" />
       <div className="inicio-card">
         <div className="inicio-card-titulo">
           Somos a Liga de Empreendedorismo da Poli    

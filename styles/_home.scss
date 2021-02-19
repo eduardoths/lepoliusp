@@ -13,6 +13,7 @@
   background-size: 200%;
   overflow: hidden;
   &-card {
+    z-index: 1;
     width: 90%;
     background: rgba(20, 37, 52, 0.65);
     padding: 20px;
@@ -33,6 +34,11 @@
       font-weight: normal;
     }
   } 
+  &-logo {
+    position: absolute;
+    bottom: 0;
+    width: 220.5px;
+  }
 }
 
 .linhas-divisoria {
