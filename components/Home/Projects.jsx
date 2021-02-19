@@ -1,8 +1,15 @@
 import { faAngleDoubleDown, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect } from "react";
 import ProjectsCards from './ProjectsCards';
 
 function Projects() {
+  function handleScrollNext() {
+    document.getElementById('cards-list').scrollBy(360, 0);
+  } 
+  function handleScrollPrev() {
+    document.getElementById('cards-list').scrollBy(-360, 0);
+  }
   return (
     <section className="projects">
       <div className="container">
@@ -44,8 +51,8 @@ function Projects() {
           </ul>
 
         </div>
-        <FontAwesomeIcon icon={faChevronLeft} width="16" className="project-previous" />
-        <FontAwesomeIcon icon={faChevronRight} width="16" className="project-next" />
+        <FontAwesomeIcon onClick={handleScrollPrev} id="projects-prev" icon={faChevronLeft} width="16" className="project-previous" />
+        <FontAwesomeIcon onClick={handleScrollNext} id="projects-next" icon={faChevronRight} width="16" className="project-next" />
       </div>
     </section>
   )

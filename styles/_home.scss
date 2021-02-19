@@ -141,7 +141,7 @@
   }
   &-cards {
     max-width: 1140px;
-    overflow-x: auto; 
+    overflow-x: hidden; 
     position: relative;
     scrollbar-width: 0;
     
@@ -149,9 +149,6 @@
       display: flex;
       list-style: none;
     }
-  }
-  &-cards::-webkit-scrollbar {
-      width: 0;
   }
 }
 
