@@ -8,12 +8,12 @@ function Sponsors() {
           <div className="col-12">
             <div className="sponsors-header">
               <h1>Nosso apoiadores</h1>
-              <p>Conheça as entidades qeu compraram nosso sonho</p>
+              <p>Conheça as entidades que compraram nosso sonho</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="container flex flex-dr-cl">
+      <div className="container flex flex-dr-cl flex-wrap">
         <div className="sponsors-logos">
           <SponsorImage 
             src="/img/logoBTC.svg" 

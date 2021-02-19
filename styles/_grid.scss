@@ -2,6 +2,9 @@
   width: 100%;
   margin: auto;
   clear: both;
+  &-relative {
+    position: relative;;
+  }
 }
 [class*="col-"] {
   float: left;

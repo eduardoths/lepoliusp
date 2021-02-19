@@ -1,5 +1,4 @@
 html, body {
-
   box-sizing: border-box;
   font-size: 100%;
 }
@@ -7,6 +6,7 @@ html, body {
 *, *::after, *::before {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -50,11 +50,9 @@ img {
   &-dc-cl {
     flex-direction: column;
   }
-}
-
-.corpo {
-  width: 100%;
-  padding: 76px 0 0 0;
+  &-wrap {
+    flex-wrap: wrap;
+  }
 }
 
 input, textarea {

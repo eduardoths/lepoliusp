@@ -67,7 +67,7 @@ export default function Header() {
 
   function handleScroll() {
     const currentScrollPos = window.pageYOffset;
-    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 0) || currentScrollPos < 76);
+    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 0) || currentScrollPos < 104);
     setPrevScrollPos(currentScrollPos);
   }
 
@@ -83,7 +83,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos, visible, handleScroll]);  
   return (
-    <header className="header" id="header" style={{top: visible ? "0px" : "-76px"}}>
+    <header className="header" id="header" style={{top: visible ? "0px" : "-104px"}}>
       <nav className="flex flex-jc-sb flex-ai-c">
         <Link href="/">
           <img alt="Liga de Empreendedorismo da USP" src="img/logo.png" className="header__logo"/>

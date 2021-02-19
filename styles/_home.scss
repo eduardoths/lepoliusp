@@ -13,6 +13,8 @@
   background-size: 200%;
   background-attachment: fixed;
   overflow: hidden;
+  font-family: $fonte-gothic; 
+
   &-card {
     z-index: 1;
     width: 90%;
@@ -22,14 +24,12 @@
 
     &-titulo {
       clear: both;
-      font-family: 'Century Gothic';
       font-weight: bold;
       font-size: 1.5rem;
     }
     &-texto {
       clear: both;
       text-align: justify;
-      font-family: 'Century Gothic';
       font-size: 1rem;
       font-style: normal;
       font-weight: normal;
@@ -38,6 +38,7 @@
   &-logo {
     position: absolute;
     bottom: 0;
+    right: 0;
     width: 220.5px;
   }
 }
@@ -65,7 +66,7 @@
 }
 
 .selection-process {
-  font-family: "Century Gothic";
+  font-family: $fonte-gothic;
   background-color: #020d14;
   h1 {
     height: fit-content;
@@ -114,8 +115,9 @@
   background-image: url('../public/img/background-projects.svg'); 
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: left;
-  overflow-x: auto;
+  background-position-x: -200px;
+  background-position-y: auto;
+  font-family: $fonte-gothic;
   &-head {
     text-align: center;
     > p, h1 {
@@ -139,12 +141,17 @@
   }
   &-cards {
     max-width: 1140px;
-    overflow: auto;
+    overflow-x: auto; 
     position: relative;
+    scrollbar-width: 0;
+    
     &-list {
       display: flex;
       list-style: none;
     }
+  }
+  &-cards::-webkit-scrollbar {
+      width: 0;
   }
 }
 
@@ -184,25 +191,28 @@
       color: $white;
     }
   }
-  &-previous {
+  &-previous, &-next {
     position: absolute;
     top: 50%;
-    left: 10px;
     transform: translate(0, -50%);
   }
+  &-previous:hover, &previous:hover, &-previous:focus, &-next:focus {
+    color: $destaque_secundario;
+  }
+  &-previous {
+    left: 10px;
+  }
   &-next {
-    position: absolute;
-    top: 50%;
     right: 10px;
-    transform: translate(0, -50%);
   }
 }
 
 .sponsors {
   background: linear-gradient(180deg, rgba(164, 191, 213, 0) 8.85%, #A4BFD5 81.77%);
-  height: 792px;
+  overflow: hidden;
+  font-family: $fonte-gothic;
+
   &-header {
-    width: 50%;
     margin: auto;
     display: block;
     align-items: center;
@@ -228,6 +238,7 @@
     align-items: center;
     margin: auto;
     max-width: 570px;
+    margin: 15px 0 75px 0;
   }
   &-logo {
     width: 100%;
@@ -240,9 +251,6 @@
     }
   }
   &-logo:hover {
-    opacity: 0.6;
-  }
-  &-logo:focus {
-    outline: none;
+    opacity: 0.5;
   }
 }

@@ -5,8 +5,11 @@
   width: 100%;
   z-index: 1;
   transition: top 0.6s;
+  font-weight: 600;
+  z-index: 2;
+
   nav {
-    padding: 6px;
+    padding: 10px;
   }
   
   &__logo {

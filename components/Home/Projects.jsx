@@ -16,7 +16,7 @@ function Projects() {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container container-relative" >
         <div className="projects-cards" id="cards-list">
           <ul className="projects-cards-list">
             <li className="projects-cards-items">
@@ -43,9 +43,9 @@ function Projects() {
             </li>
           </ul>
 
+        </div>
         <FontAwesomeIcon icon={faChevronLeft} width="16" className="project-previous" />
         <FontAwesomeIcon icon={faChevronRight} width="16" className="project-next" />
-        </div>
       </div>
     </section>
   )

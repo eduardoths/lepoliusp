@@ -2,6 +2,7 @@
   .container {max-width: 1140px;}
   nav {max-width: 1140px; margin: auto;}
   .header {
+    nav {padding: 15px;}
     &__menu {
       display: none;
     }
@@ -73,6 +74,8 @@
       padding-bottom: 20px; 
     }
   }
+  .projects {background-position-x: -100px;}
+  .sponsors {padding-bottom: 0;}
 }
 
 @media only screen and (min-width: 1366px) {
@@ -89,7 +92,13 @@
       }
     }
     &-logo {
-      width: 600px;
+      width: 500px;
+    }
+  }
+  .projects {background-position: left;}
+  .project {
+    &-previous, &-next {
+      visibility: hidden;
     }
   }
 }
