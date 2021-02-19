@@ -11,6 +11,7 @@
   background-image: url('../public/img/inicio-detalhes.svg');
   background-repeat : no-repeat;
   background-size: 200%;
+  background-attachment: fixed;
   overflow: hidden;
   &-card {
     z-index: 1;

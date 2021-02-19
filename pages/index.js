@@ -1,4 +1,4 @@
-import SelectionProcess from '../components/SelectionProcess'
+import SelectionProcess from '../components/Home/SelectionProcess'
 function Home() {
   return (
   <>
