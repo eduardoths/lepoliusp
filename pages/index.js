@@ -1,4 +1,6 @@
-import SelectionProcess from '../components/Home/SelectionProcess'
+import Projects from '../components/Home/Projects';
+import SelectionProcess from '../components/Home/SelectionProcess';
+
 function Home() {
   return (
   <>
@@ -16,8 +18,9 @@ function Home() {
         </div>
       </div>
     </div>
-    <SelectionProcess />
   </section>
+  <SelectionProcess />
+  <Projects />
   </>
   );
 }
