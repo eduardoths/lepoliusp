@@ -2,6 +2,7 @@ import SelectionProcess from '../components/SelectionProcess'
 function Home() {
   return (
   <>
+  <section id="home-start">
     <div className="inicio">
       <div className="inicio-card">
         <div className="inicio-card-titulo">
@@ -15,6 +16,7 @@ function Home() {
       </div>
     </div>
     <SelectionProcess />
+  </section>
   </>
   );
 }
