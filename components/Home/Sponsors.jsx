@@ -13,19 +13,19 @@ function Sponsors() {
           </div>
         </div>
       </div>
-      <div className="container flex flex-dr-cl flex-wrap">
+      <div className="sponsors-logos-container">
         <div className="sponsors-logos">
           <SponsorImage 
             src="/img/logoBTC.svg" 
-            href="https://codecraft.com.br/"/>
-          <SponsorImage 
-            src="/img/logoCodecraft.svg" 
-            href="https://codecraft.com.br/" />
-        </div>
-        <div className="sponsors-logos">
+            href="https://www.btcompany.com.br/"/>
           <SponsorImage 
             src="/img/logoFundacaoEstudar.svg"
             href="https://www.estudar.org.br/"/>
+        </div>
+        <div className="sponsors-logos">
+          <SponsorImage 
+            src="/img/logoCodecraft.svg" 
+            href="https://codecraft.com.br/" />
           <SponsorImage 
             src="/img/logoTalent.svg"
             href="https://talentacademy.com.br/"/>
