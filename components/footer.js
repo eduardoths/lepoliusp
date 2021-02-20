@@ -42,7 +42,7 @@ export default function Footer() {
     </div>
     <div className="footer-social-media">
       <h3>Acesse nossas redes sociais</h3>
-      <div className="flex flex-js-c">
+      <div className="flex flex-jc-c">
         <div>
           <a target="_blank" href="https://facebook.com/lepoliusp"><FontAwesomeIcon icon={ faFacebookF } height="36"/></a>
         </div>

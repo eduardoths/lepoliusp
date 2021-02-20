@@ -36,12 +36,14 @@ img {
 
 .flex {
   display: flex;
-
+  &-jc-sa {
+    justify-content: space-evenly;
+  }
   &-jc-sb {
     justify-content: space-between;
   }
 
-  &-js-c {
+  &-jc-c {
     justify-content: center;
   }
 
