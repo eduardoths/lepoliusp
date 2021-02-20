@@ -97,7 +97,7 @@
   text-align: center;
   max-width: 550px;
   width: 90%;
-  margin: auto;
+  margin: auto auto 50px auto;
   height: 550px;
   border-radius: 61px;
   background-color:#101E2A;
@@ -108,7 +108,7 @@
     text-align: center;
     >h1 {
       font-weight: 600;
-      font-size: 3rem;
+      font-size: 2.25rem;
     }
     >p {
       font-size: 1.25rem;
@@ -119,7 +119,6 @@
   &-images {
     position: relative;
     width: 100%;
-    height: 255px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -129,8 +128,11 @@
       text-align: center;
       text-indent: 0;
     }
+    >div {
+      top: 5px;
+    }
     >div:nth-child(1) {
-      left: 10%;
+      left: 15%;
       z-index: 2;
     }
     >div:nth-child(2) {
@@ -148,20 +150,57 @@
   &-person {
     position: relative;
     display: flex;
-    height: 255px;
     overflow: visible;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    >img {
+    >a>img {
       height: 150px;
       overflow: hidden;
       filter: grayscale(100%);
       transition: filter 1s;
       object-fit: cover;
     }
-    >img:hover {
+    >a>img:hover {
       filter: grayscale(0);
+    }
+  }
+}
+#raphael {
+  z-index: 2;
+}
+#guilherme {
+  z-index: 0;
+}
+#diego {
+  z-index: 0;
+}
+#gabriel {
+  left: 40%;
+}
+#felipe {
+  left: 10%;
+}
+#joão {
+  right: 35%;
+}
+#joaquim {
+  right: 15%
+}
+
+@media only screen and (min-width: 612px) {
+  #gabriel {left: 20%}
+  #felipe {left: 10%}
+  #joão {right: 10%}
+  #joaquim {right: 0}
+  .team-card {
+    &-text {
+      >h1 {font-size: 3rem;}
+    }
+    &-images-person {
+      >a>img {
+        height: 175px;
+      }
     }
   }
 }
