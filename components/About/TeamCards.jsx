@@ -10,7 +10,7 @@ export default function TeamCards({children, title, members}) {
     Gabriel:    "https://www.linkedin.com/in/gabriel-braga-francisco-259999178/",
     Guilherme:  "https://www.linkedin.com/in/guilherme-piffer-christo-642959123/",
     João:       "https://www.linkedin.com/in/jo%C3%A3o-biagi-balau-37392b1a1/",
-    Joaquiem:   "https://www.linkedin.com/in/joaquim-prado/",
+    Joaquim:   "https://www.linkedin.com/in/joaquim-prado/",
     Luísa:      "https://www.linkedin.com/in/lu%C3%ADsa-perez-yamauchi-baptista-141261191/",
     Raphael:    "https://www.linkedin.com/in/raphael-vila%C3%A7a-8b4a571a3/",
     Vinicius:   "https://www.linkedin.com/in/vinicius-lemos-ab387b185/"
