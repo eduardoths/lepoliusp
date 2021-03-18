@@ -23,9 +23,9 @@ export default function Footer() {
                 <ul className="footer__menu">
                   <li><Link href="/">Home</Link></li>
                   <li><Link href="/Sobre">Quem Somos</Link></li>
-                  <li><Link href="/Projetos">Projetos</Link></li>
-                  <li><Link href="/Eventos">Eventos</Link></li>
-                  <li><Link href="/Blog">Blog</Link></li>
+                  {/*<li><Link href="/Projetos">Projetos</Link></li>*/}
+                  {/*<li><Link href="/Eventos">Eventos</Link></li>*/}
+                  {/*<li><Link href="/Blog">Blog</Link></li>*/}
                   <li><Link href="/Contato">Contato</Link></li>
                 </ul>
               </div>

@@ -13,9 +13,9 @@ function MenuLinks(props) {
     <div onClick={props.onClick} style={props.style} className={classConcat}>
       <Link href="/">Home</Link>
       <Link href="/Sobre">Quem Somos</Link>
-      <Link href="/Projetos">Projetos</Link>
-      <Link href="/Eventos">Eventos</Link>
-      <Link href="/Blog">Blog</Link>
+      {/*<Link href="/Projetos">Projetos</Link>*/}
+      {/*<Link href="/Eventos">Eventos</Link>*/}
+      {/*<Link href="/Blog">Blog</Link>*/}
       <Link href="/Contato">Contato</Link>
     </div>
   );
