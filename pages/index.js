@@ -20,7 +20,7 @@ function Home() {
         </div>
       </div>
     </section>
-    <SelectionProcess />
+    {/*<SelectionProcess />*/}
     <Projects />
     <Sponsors />
   </>
