@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
+import Bounce from 'react-reveal/Bounce';
 function MenuSpan(props) {
   return <span style={props.style}></span>
 }
@@ -10,7 +10,7 @@ function MenuLinks(props) {
   if (classConcat === undefined)
     classConcat = "";
   return (
-    <div onClick={props.onClick} style={props.style} className={"header__links " + classConcat}>
+    <div onClick={props.onClick} style={props.style} className={classConcat}>
       <Link href="/">Home</Link>
       <Link href="/Sobre">Quem Somos</Link>
       <Link href="/Projetos">Projetos</Link>
@@ -32,13 +32,8 @@ function MenuSimbolo(props) {
 }
 
 export default function Header() {
-  const menuInferiorAberto = {
-    display: "block",
-    padding: "10px 20px",
-    borderTop: "solid 1px #cccccc"
-  };
   const [menuFechado, setMenuFechado] = useState(true);
-  const [displayMenuInferior, setDisplayMenuInferior] = useState({display: "none"});
+  const [displayMenuInferior, setDisplayMenuInferior] = useState({top: "-500px"});
   const [menuInferior, setMenuInferior] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -51,9 +46,9 @@ export default function Header() {
   }
 
   function handleClick() {
-    let proxDisplay = (displayMenuInferior.display === "block") ? "none" : "block"; 
+    let proxTop = !visible ? "-500px" : menuFechado ? "84px" : "-500px";
     setMenuFechado(!menuFechado);
-    setDisplayMenuInferior({display : proxDisplay});
+    setDisplayMenuInferior({top: proxTop});
     setMenuInferior(!menuInferior);
   }
   
@@ -79,15 +74,19 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos, visible, handleScroll]);  
   return (
-    <header className="header" id="header" style={{top: visible ? "0px" : "-104px"}}>
-      <nav className="flex flex-jc-sb flex-ai-c">
-        <Link href="/">
-          <img alt="Liga de Empreendedorismo da USP" src="img/logo.png" className="header__logo"/>
-        </Link>
-        <MenuSimbolo estilos={estilos} cliqueMenu={() => {handleClick(), handleClickMenu()}}/>
-        <MenuLinks />
-      </nav>
-      <MenuLinks style={displayMenuInferior} classConcat="header__menu__mobile" onClick={() => {handleClick(), handleClickMenu()}}/>
-    </header>
+    <>
+      <header className="header" id="header" style={{top: visible ? "0px" : "-104px"}}>
+        <nav className="flex flex-jc-sb flex-ai-c">
+          <Link href="/">
+            <img alt="Liga de Empreendedorismo da USP" src="img/logo.png" className="header__logo"/>
+          </Link>
+          <MenuSimbolo estilos={estilos} cliqueMenu={() => {handleClick(), handleClickMenu()}}/>
+          <MenuLinks classConcat="header__links"/>
+        </nav>
+      </header>
+      <Bounce top collapse when={!menuFechado}>
+        <MenuLinks style={{top: !visible ? "-500px" : displayMenuInferior.top}} classConcat="header__menu__mobile" onClick={() => {handleClick(), handleClickMenu()}}/>
+      </Bounce>      
+    </>
   );
 }

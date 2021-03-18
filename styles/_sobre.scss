@@ -148,12 +148,20 @@
     }
   }
   &-person {
-    position: relative;
+    position: relative !important;
     display: flex;
     overflow: visible;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
+    >a>p {
+      index: 0;
+      transition: color 0.5s;
+      position: relative;
+    }
+    >a>p:hover {
+      color:orange
+    }
     >a>img {
       height: 150px;
       overflow: hidden;
@@ -166,33 +174,86 @@
     }
   }
 }
-#raphael {
-  z-index: 2;
+
+#guilherme, #vinicius, #luísa, #diego {
+  >a>img {
+    height: 200px;
+  }
 }
+
+#beatriz {
+  >a>p {
+    left: 10%;
+  }
+}
+
+#diego {
+  z-index: 0;
+  >a>p {
+    left: 20%;
+  }
+}
+
+#eduardo {
+  left: 25%;
+}
+
+#felipe {
+  left: 0%;
+}
+
+#gabriel {
+  left: 30%;
+  >a>p {
+    left: 8%;
+  }
+}
+
 #guilherme {
   z-index: 0;
 }
-#diego {
-  z-index: 0;
-}
-#gabriel {
-  left: 40%;
-}
-#felipe {
-  left: 10%;
-}
-#joão {
-  right: 35%;
-}
+
 #joaquim {
-  right: 15%
+  right: 15%;
+  >a>p {
+    position: relative;
+    right: 15%;
+  }
+}
+
+#joão {
+  right: 40%;
+  >a>p {
+    left: 15%;
+  }
+}
+
+#luísa {
+  right: 10%;
+  >a>p {
+    left: 15%;
+  }
+}
+
+#raphael {
+  z-index: 2;
+  right: 20%;
+}
+
+#vinicius {
+  >a>p {
+    left: 10%;
+  }
 }
 
 @media only screen and (min-width: 612px) {
-  #gabriel {left: 20%}
-  #felipe {left: 10%}
-  #joão {right: 10%}
-  #joaquim {right: 0}
+  #diego {left: 5%}
+  #eduardo {left: 15%;}
+  #felipe {left: 0}
+  #gabriel {left: 15%;}
+  #joaquim {right: 5%;}
+  #joão {right: 15%;}
+  #raphael {right: 10%;}
   .team-card {
     &-text {
       >h1 {font-size: 3rem;}
@@ -203,4 +264,15 @@
       }
     }
   }
+  #guilherme >a>p {
+    position: relative;
+    right: 10px;
+  }
+  
+  #vinicius >a>p {
+    position: relative;
+    left: 10px;
+  }
 }
+
+

@@ -10,6 +10,7 @@
 
   nav {
     padding: 10px;
+    background-color: #000;
   }
   
   &__logo {
@@ -21,6 +22,12 @@
   &__menu{
     position: relative;
     &__mobile {
+      width: 100%;
+      background-color: #000;
+      position: fixed;
+      transition: top 0.5s;
+      top: -500px;
+      z-index: 4;
       > a {
         display: block;
         padding: 10px 20px;

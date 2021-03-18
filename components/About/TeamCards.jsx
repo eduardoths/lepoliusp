@@ -1,3 +1,4 @@
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -19,10 +20,12 @@ export default function TeamCards({children, title, members}) {
   for (let i=0; i < members.length; i++) {
     imagens[i] = (
       <div key={"person-" + members[i]} className="team-card-person" id={members[i].toLowerCase()}>
-        <p key={"person-" + members[i] + "-p"}>{members[i]}</p>
+        <a key={"person-linkedin" + members[i]} href={linkedins[members[i]]} target="_blank">
+          <p key={"person-" + members[i] + "-p"}><FontAwesomeIcon icon={faLinkedinIn} width="10" /> {members[i]}</p>
+         </a>
         <a key={"person-" + members[i] + "-a"}
         href={linkedins[members[i]]} target="_blank">
-          <img key={"person-" + members[i] + "-img"} src={"/img/" + "eduardo" + ".png"} />
+          <img key={"person-" + members[i] + "-img"} src={"/img/members/" + members[i] + ".png"} />
         </a>
 
       </div>
