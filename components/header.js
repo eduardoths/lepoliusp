@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Bounce from 'react-reveal/Bounce';
+
 function MenuSpan(props) {
   return <span style={props.style}></span>
 }
@@ -46,7 +46,7 @@ export default function Header() {
   }
 
   function handleClick() {
-    let proxTop = !visible ? "-500px" : menuFechado ? "84px" : "-500px";
+    let proxTop = (!menuFechado) ? "-500px" : "84px";
     setMenuFechado(!menuFechado);
     setDisplayMenuInferior({top: proxTop});
     setMenuInferior(!menuInferior);
@@ -84,9 +84,7 @@ export default function Header() {
           <MenuLinks classConcat="header__links"/>
         </nav>
       </header>
-      <Bounce top collapse when={!menuFechado}>
-        <MenuLinks style={{top: !visible ? "-500px" : displayMenuInferior.top}} classConcat="header__menu__mobile" onClick={() => {handleClick(), handleClickMenu()}}/>
-      </Bounce>      
+      <MenuLinks style={{top: !visible ? "-500px" : displayMenuInferior.top}} classConcat="header__menu__mobile" onClick={() => {handleClick(), handleClickMenu()}}/>
     </>
   );
 }
